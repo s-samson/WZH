@@ -17,8 +17,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var redButton: UIButton!
     @IBOutlet weak var blueButton: UIButton!
     @IBOutlet weak var greenButton: UIButton!
-    
+    @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -35,6 +37,7 @@ class ViewController: UIViewController {
         
         categoryQuestions = quizQuestions.filter { $0.category == .orange }
         print("categoryQuestions are: \(categoryQuestions)")
+        questionLabel.text = categoryQuestions[0].question
     }
     
     
@@ -43,6 +46,7 @@ class ViewController: UIViewController {
         
         categoryQuestions = quizQuestions.filter { $0.category == .red }
         print("categoryQuestions are: \(categoryQuestions)")
+        questionLabel.text = categoryQuestions[3].question
     }
     
     @IBAction func didTouchYellowButton(_ sender: Any) {
@@ -50,6 +54,7 @@ class ViewController: UIViewController {
         
         categoryQuestions = quizQuestions.filter { $0.category == .yellow }
         print("categoryQuestions are: \(categoryQuestions)")
+        questionLabel.text = categoryQuestions[0].question
     }
     
     @IBAction func didTouchGreenButton(_ sender: Any) {
@@ -57,6 +62,7 @@ class ViewController: UIViewController {
         
         categoryQuestions = quizQuestions.filter { $0.category == .green }
         print("categoryQuestions are: \(categoryQuestions)")
+        questionLabel.text = categoryQuestions[0].question
     }
     
     @IBAction func didTouchBlueButton(_ sender: Any) {
@@ -64,6 +70,7 @@ class ViewController: UIViewController {
         
         categoryQuestions = quizQuestions.filter { $0.category == .blue }
         print("categoryQuestions are: \(categoryQuestions)")
+        questionLabel.text = categoryQuestions[0].question
     }
     
     @IBAction func backButton(_ sender: Any) {
@@ -77,6 +84,7 @@ class ViewController: UIViewController {
         blueButton.isHidden = true
         orangeButton.isHidden = true
         backButton.isHidden = false
+        questionLabel.isHidden = false
     }
     func showButtons(){
         redButton.isHidden = false
