@@ -18,7 +18,7 @@ enum QuizCategory: String, Codable{
     
     case red
     case green
-    case purple
-    case blue
     case yellow
+    case blue
+    case orange
 }

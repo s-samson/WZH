@@ -17,6 +17,7 @@
 		72F0972A27FAC9840097B2ED /* QuizAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F0972927FAC9840097B2ED /* QuizAppUITests.swift */; };
 		72F0972C27FAC9840097B2ED /* QuizAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F0972B27FAC9840097B2ED /* QuizAppUITestsLaunchTests.swift */; };
 		72F0973927FAD4750097B2ED /* QuizQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F0973827FAD4750097B2ED /* QuizQuestion.swift */; };
+		72F0974127FAF78F0097B2ED /* localQuizData.json in Resources */ = {isa = PBXBuildFile; fileRef = 72F0974027FAF78F0097B2ED /* localQuizData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		72F0972927FAC9840097B2ED /* QuizAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAppUITests.swift; sourceTree = "<group>"; };
 		72F0972B27FAC9840097B2ED /* QuizAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		72F0973827FAD4750097B2ED /* QuizQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestion.swift; sourceTree = "<group>"; };
+		72F0974027FAF78F0097B2ED /* localQuizData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = localQuizData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		72F0970727FAC9820097B2ED /* QuizApp */ = {
 			isa = PBXGroup;
 			children = (
+				72F0973A27FAF3A80097B2ED /* data */,
 				72F0970827FAC9820097B2ED /* AppDelegate.swift */,
 				72F0970A27FAC9820097B2ED /* SceneDelegate.swift */,
 				72F0970C27FAC9820097B2ED /* ViewController.swift */,
@@ -128,6 +131,14 @@
 				72F0972B27FAC9840097B2ED /* QuizAppUITestsLaunchTests.swift */,
 			);
 			path = QuizAppUITests;
+			sourceTree = "<group>";
+		};
+		72F0973A27FAF3A80097B2ED /* data */ = {
+			isa = PBXGroup;
+			children = (
+				72F0974027FAF78F0097B2ED /* localQuizData.json */,
+			);
+			path = data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72F0974127FAF78F0097B2ED /* localQuizData.json in Resources */,
 				72F0971527FAC9840097B2ED /* LaunchScreen.storyboard in Resources */,
 				72F0971227FAC9840097B2ED /* Assets.xcassets in Resources */,
 				72F0971027FAC9820097B2ED /* Main.storyboard in Resources */,
