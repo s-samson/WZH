@@ -20,6 +20,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
     
+    @IBOutlet weak var nextQuestion: UIButton!
+    @IBOutlet weak var showAnswer: UIButton!
+    @IBOutlet weak var answerField: UITextField!
+    @IBOutlet weak var answerLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,6 +89,10 @@ class ViewController: UIViewController {
         orangeButton.isHidden = true
         backButton.isHidden = false
         questionLabel.isHidden = false
+        answerLabel.isHidden = false
+        answerField.isHidden = false
+        showAnswer.isHidden = false
+        nextQuestion.isHidden = false
     }
     func showButtons(){
         redButton.isHidden = false
@@ -93,6 +101,11 @@ class ViewController: UIViewController {
         blueButton.isHidden = false
         orangeButton.isHidden = false
         backButton.isHidden = true
+        questionLabel.isHidden = true
+        answerLabel.isHidden = true
+        answerField.isHidden = true
+        showAnswer.isHidden = true
+        nextQuestion.isHidden = true
     }
     
     

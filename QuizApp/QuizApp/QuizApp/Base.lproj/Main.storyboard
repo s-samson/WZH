@@ -78,7 +78,7 @@
                                     <action selector="didTouchYellowButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EVQ-OQ-yq2"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anwser Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMR-rW-6t4">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anwser Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMR-rW-6t4">
                                 <rect key="frame" x="115" y="288" width="184" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="184" id="JsT-Zz-Vtz"/>
@@ -88,7 +88,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RU5-ns-cHR">
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RU5-ns-cHR">
                                 <rect key="frame" x="124" y="347" width="166" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="166" id="00k-NU-Zmv"/>
@@ -97,7 +97,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m7g-cX-kZW">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m7g-cX-kZW">
                                 <rect key="frame" x="10" y="389" width="111" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="111" id="RBI-Ux-7EB"/>
@@ -120,7 +120,7 @@
                                     <action selector="didTouchOrangeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YZE-Xw-M6w"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eay-g9-Cak">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eay-g9-Cak">
                                 <rect key="frame" x="287" y="389" width="117" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="Ke1-6z-TV2"/>
@@ -179,12 +179,16 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="answerField" destination="RU5-ns-cHR" id="eAP-Xd-47N"/>
+                        <outlet property="answerLabel" destination="sMR-rW-6t4" id="0Od-24-kUr"/>
                         <outlet property="backButton" destination="BKN-lG-P0I" id="UFa-1i-SaZ"/>
                         <outlet property="blueButton" destination="6SR-fp-DVu" id="M0k-j0-ucG"/>
                         <outlet property="greenButton" destination="D3t-i2-a8I" id="Cj9-i4-RO9"/>
+                        <outlet property="nextQuestion" destination="eay-g9-Cak" id="1Ss-dv-Xsu"/>
                         <outlet property="orangeButton" destination="mU4-w7-SHC" id="Rmm-fK-f8E"/>
                         <outlet property="questionLabel" destination="Jsj-mm-Oc6" id="hu8-kz-XJb"/>
                         <outlet property="redButton" destination="kHm-KL-y2S" id="lB0-yd-zbR"/>
+                        <outlet property="showAnswer" destination="m7g-cX-kZW" id="vGp-dq-doP"/>
                         <outlet property="yellowButton" destination="DG3-vm-GfJ" id="jwb-ej-07f"/>
                     </connections>
                 </viewController>
