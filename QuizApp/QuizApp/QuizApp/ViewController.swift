@@ -10,14 +10,15 @@ import UIKit
 class ViewController: UIViewController {
     
     var quizQuestions: [QuizQuestion] = []
+    var categoryQuestions: [QuizQuestion] = []
 
-    @IBOutlet weak var purpleButton: UIButton!
+    @IBOutlet weak var orangeButton: UIButton!
     @IBOutlet weak var yellowButton: UIButton!
-    @IBOutlet weak var greenButton: UIButton!
-    @IBOutlet weak var blueButton: UIButton!
     @IBOutlet weak var redButton: UIButton!
-    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var blueButton: UIButton!
+    @IBOutlet weak var greenButton: UIButton!
     
+    @IBOutlet weak var backButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -29,32 +30,42 @@ class ViewController: UIViewController {
         getLocalQuizData()
     }
 
-    @IBAction func ButtonOne(_ sender: Any) {
+    @IBAction func didTouchOrangeButton(_ sender: Any) {
         hideButtons()
         
+        categoryQuestions = quizQuestions.filter { $0.category == .orange }
+        print("categoryQuestions are: \(categoryQuestions)")
     }
     
-    @IBAction func ButtonTwo(_ sender: Any) {
+    
+    @IBAction func didTouchRedButton(_ sender: Any) {
         hideButtons()
         
+        categoryQuestions = quizQuestions.filter { $0.category == .red }
+        print("categoryQuestions are: \(categoryQuestions)")
     }
     
-    @IBAction func buttonThree(_ sender: Any) {
+    @IBAction func didTouchYellowButton(_ sender: Any) {
         hideButtons()
         
+        categoryQuestions = quizQuestions.filter { $0.category == .yellow }
+        print("categoryQuestions are: \(categoryQuestions)")
     }
     
-    @IBAction func buttonFour(_ sender: Any) {
-        hideButtons()
-   
-    }
-    
-    @IBAction func buttonFive(_ sender: Any) {
+    @IBAction func didTouchGreenButton(_ sender: Any) {
         hideButtons()
         
+        categoryQuestions = quizQuestions.filter { $0.category == .green }
+        print("categoryQuestions are: \(categoryQuestions)")
     }
     
-  
+    @IBAction func didTouchBlueButton(_ sender: Any) {
+        hideButtons()
+        
+        categoryQuestions = quizQuestions.filter { $0.category == .blue }
+        print("categoryQuestions are: \(categoryQuestions)")
+    }
+    
     @IBAction func backButton(_ sender: Any) {
         showButtons()
     }
@@ -64,7 +75,7 @@ class ViewController: UIViewController {
         yellowButton.isHidden = true
         greenButton.isHidden = true
         blueButton.isHidden = true
-        purpleButton.isHidden = true
+        orangeButton.isHidden = true
         backButton.isHidden = false
     }
     func showButtons(){
@@ -72,7 +83,7 @@ class ViewController: UIViewController {
         yellowButton.isHidden = false
         greenButton.isHidden = false
         blueButton.isHidden = false
-        purpleButton.isHidden = false
+        orangeButton.isHidden = false
         backButton.isHidden = true
     }
     

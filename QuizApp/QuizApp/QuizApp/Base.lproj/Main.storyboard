@@ -33,7 +33,7 @@
                                     <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="buttonFour:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uc3-tG-BPU"/>
+                                    <action selector="didTouchBlueButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LIf-NS-ztE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHm-KL-y2S">
@@ -47,7 +47,7 @@
                                     <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="buttonFive:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DZN-vK-VGh"/>
+                                    <action selector="didTouchRedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4C5-Zj-sGM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3t-i2-a8I">
@@ -61,7 +61,7 @@
                                     <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="buttonThree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B8q-bz-ZBI"/>
+                                    <action selector="didTouchGreenButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ddq-vr-eO1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DG3-vm-GfJ">
@@ -75,7 +75,7 @@
                                     <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="ButtonTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ntc-8c-Y4P"/>
+                                    <action selector="didTouchYellowButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EVQ-OQ-yq2"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anwser Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMR-rW-6t4">
@@ -106,8 +106,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Show Answer"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mU4-w7-SHC">
-                                <rect key="frame" x="10" y="54" width="111" height="38"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mU4-w7-SHC">
+                                <rect key="frame" x="10" y="55" width="111" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="111" id="089-y5-KH9"/>
                                     <constraint firstAttribute="height" constant="38" id="yoY-sz-afR"/>
@@ -117,7 +117,7 @@
                                     <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="ButtonOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vHj-az-L1t"/>
+                                    <action selector="didTouchOrangeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YZE-Xw-M6w"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eay-g9-Cak">
@@ -129,8 +129,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Next Question"/>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKN-lG-P0I">
-                                <rect key="frame" x="10" y="54" width="111" height="38"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKN-lG-P0I">
+                                <rect key="frame" x="10" y="55" width="111" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="111" id="9vK-dU-kF6"/>
                                     <constraint firstAttribute="height" constant="38" id="V26-Vw-l0O"/>
@@ -140,7 +140,6 @@
                                     <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="ButtonOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ngO-1t-qAv"/>
                                     <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iSK-Ld-evT"/>
                                 </connections>
                             </button>
@@ -171,12 +170,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="backButton" destination="BKN-lG-P0I" id="jsW-yc-8xn"/>
+                        <outlet property="backButton" destination="BKN-lG-P0I" id="UFa-1i-SaZ"/>
                         <outlet property="blueButton" destination="6SR-fp-DVu" id="M0k-j0-ucG"/>
-                        <outlet property="greenButton" destination="D3t-i2-a8I" id="RsQ-Se-Dsy"/>
-                        <outlet property="purpleButton" destination="mU4-w7-SHC" id="wBJ-hN-XFd"/>
-                        <outlet property="redButton" destination="kHm-KL-y2S" id="GAr-Fe-OhD"/>
-                        <outlet property="yellowButton" destination="DG3-vm-GfJ" id="6Nv-Fd-uhQ"/>
+                        <outlet property="greenButton" destination="D3t-i2-a8I" id="Cj9-i4-RO9"/>
+                        <outlet property="orangeButton" destination="mU4-w7-SHC" id="Rmm-fK-f8E"/>
+                        <outlet property="redButton" destination="kHm-KL-y2S" id="lB0-yd-zbR"/>
+                        <outlet property="yellowButton" destination="DG3-vm-GfJ" id="jwb-ej-07f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
