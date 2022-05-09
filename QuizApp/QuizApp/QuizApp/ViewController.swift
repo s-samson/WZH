@@ -107,7 +107,8 @@ class ViewController: UIViewController , UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         answerLabel.isHidden = false
-        if answerField.text == categoryQuestions[currentIndex].answer {
+        let answer = answerField.text
+        if answer?.lowercased() == categoryQuestions[currentIndex].answer {
             answerLabel.text = "Correct ✅"
     } else {
         answerLabel.text = "False ❌"
