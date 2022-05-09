@@ -11,6 +11,7 @@ class ViewController: UIViewController {
     
     var quizQuestions: [QuizQuestion] = []
     var categoryQuestions: [QuizQuestion] = []
+    var currentIndex = 0
 
     @IBOutlet weak var orangeButton: UIButton!
     @IBOutlet weak var yellowButton: UIButton!
@@ -41,7 +42,7 @@ class ViewController: UIViewController {
         
         categoryQuestions = quizQuestions.filter { $0.category == .orange }
         print("categoryQuestions are: \(categoryQuestions)")
-        questionLabel.text = categoryQuestions[0].question
+        questionLabel.text = categoryQuestions[currentIndex].question
     }
     
     
@@ -50,7 +51,7 @@ class ViewController: UIViewController {
         
         categoryQuestions = quizQuestions.filter { $0.category == .red }
         print("categoryQuestions are: \(categoryQuestions)")
-        questionLabel.text = categoryQuestions[3].question
+        questionLabel.text = categoryQuestions[currentIndex].question
     }
     
     @IBAction func didTouchYellowButton(_ sender: Any) {
@@ -58,7 +59,7 @@ class ViewController: UIViewController {
         
         categoryQuestions = quizQuestions.filter { $0.category == .yellow }
         print("categoryQuestions are: \(categoryQuestions)")
-        questionLabel.text = categoryQuestions[0].question
+        questionLabel.text = categoryQuestions[currentIndex].question
     }
     
     @IBAction func didTouchGreenButton(_ sender: Any) {
@@ -66,7 +67,7 @@ class ViewController: UIViewController {
         
         categoryQuestions = quizQuestions.filter { $0.category == .green }
         print("categoryQuestions are: \(categoryQuestions)")
-        questionLabel.text = categoryQuestions[0].question
+        questionLabel.text = categoryQuestions[currentIndex].question
     }
     
     @IBAction func didTouchBlueButton(_ sender: Any) {
@@ -74,12 +75,28 @@ class ViewController: UIViewController {
         
         categoryQuestions = quizQuestions.filter { $0.category == .blue }
         print("categoryQuestions are: \(categoryQuestions)")
-        questionLabel.text = categoryQuestions[0].question
+        questionLabel.text = categoryQuestions[currentIndex].question
     }
     
     @IBAction func backButton(_ sender: Any) {
         showButtons()
     }
+    
+    
+    @IBAction func showAnswer(_ sender: Any) {
+        currentIndex += 0
+        answerLabel.text=categoryQuestions[currentIndex].answer
+        setupQuiz()
+    }
+    
+    
+    @IBAction func nextQuestion(_ sender: Any) {
+        currentIndex += 1
+        questionLabel.text=categoryQuestions[currentIndex].question
+        setupQuiz()
+        
+    }
+    
     
     func hideButtons(){
         redButton.isHidden = true
