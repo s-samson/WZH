@@ -83,10 +83,10 @@
                                 </connections>
                             </textField>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m7g-cX-kZW">
-                                <rect key="frame" x="10" y="389" width="111" height="38"/>
+                                <rect key="frame" x="7" y="389" width="118" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Show Answer"/>
+                                <buttonConfiguration key="configuration" style="filled" title="toon antwoord"/>
                                 <connections>
                                     <action selector="showAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m2o-9u-euf"/>
                                 </connections>
@@ -103,10 +103,10 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eay-g9-Cak">
-                                <rect key="frame" x="287" y="389" width="117" height="38"/>
+                                <rect key="frame" x="284" y="389" width="124" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Next Question"/>
+                                <buttonConfiguration key="configuration" style="filled" title="volgende vraag"/>
                                 <connections>
                                     <action selector="nextQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7cF-gG-4Db"/>
                                 </connections>
@@ -129,6 +129,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w74-uQ-wyE">
+                                <rect key="frame" x="157" y="562" width="119" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -143,6 +150,7 @@
                         <outlet property="orangeButton" destination="mU4-w7-SHC" id="Rmm-fK-f8E"/>
                         <outlet property="questionLabel" destination="Jsj-mm-Oc6" id="hu8-kz-XJb"/>
                         <outlet property="redButton" destination="kHm-KL-y2S" id="lB0-yd-zbR"/>
+                        <outlet property="scoreLabel" destination="w74-uQ-wyE" id="sit-9a-QD0"/>
                         <outlet property="showAnswer" destination="m7g-cX-kZW" id="vGp-dq-doP"/>
                         <outlet property="yellowButton" destination="DG3-vm-GfJ" id="jwb-ej-07f"/>
                     </connections>

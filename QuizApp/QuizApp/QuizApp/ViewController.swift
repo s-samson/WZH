@@ -13,9 +13,9 @@ class ViewController: UIViewController , UITextFieldDelegate {
     var quizQuestions: [QuizQuestion] = []
     var categoryQuestions: [QuizQuestion] = []
     var currentIndex = 0
+    var score = 0
+    var getScore = true
     
-
-
     @IBOutlet weak var orangeButton: UIButton!
     @IBOutlet weak var yellowButton: UIButton!
     @IBOutlet weak var redButton: UIButton!
@@ -23,7 +23,7 @@ class ViewController: UIViewController , UITextFieldDelegate {
     @IBOutlet weak var greenButton: UIButton!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
-    
+    @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var nextQuestion: UIButton!
     @IBOutlet weak var showAnswer: UIButton!
     @IBOutlet weak var answerField: UITextField!
@@ -37,6 +37,7 @@ class ViewController: UIViewController , UITextFieldDelegate {
     }
     
     func setupQuiz() {
+        scoreLabel.text = "score : \(score)"
         getLocalQuizData()
     }
 
@@ -84,6 +85,7 @@ class ViewController: UIViewController , UITextFieldDelegate {
     @IBAction func backButton(_ sender: Any) {
         showButtons()
         answerField.text = ""
+        
     }
     
     
@@ -91,7 +93,6 @@ class ViewController: UIViewController , UITextFieldDelegate {
         currentIndex += 0
         answerLabel.text=categoryQuestions[currentIndex].answer
         answerLabel.isHidden = false
-        setupQuiz()
     }
     
     
@@ -105,17 +106,25 @@ class ViewController: UIViewController , UITextFieldDelegate {
     }
     
     
+    
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         answerLabel.isHidden = false
         let answer = answerField.text
+        
         if answer?.lowercased() == categoryQuestions[currentIndex].answer {
             answerLabel.text = "Correct ✅"
-    } else {
-        answerLabel.text = "False ❌"
-    }
+            if getScore == true{
+            score += 1
+            scoreLabel.text = "score : \(score)"
+            getScore = false
+            }
+        } else {
+            answerLabel.text = "False ❌"
+        }
+        
         return true
     }
-    
     
     func hideButtons(){
         redButton.isHidden = true
@@ -129,6 +138,7 @@ class ViewController: UIViewController , UITextFieldDelegate {
         showAnswer.isHidden = false
         nextQuestion.isHidden = false
     }
+    
     func showButtons(){
         redButton.isHidden = false
         yellowButton.isHidden = false
