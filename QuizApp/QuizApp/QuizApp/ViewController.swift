@@ -7,11 +7,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+
+class ViewController: UIViewController , UITextFieldDelegate {
     
     var quizQuestions: [QuizQuestion] = []
     var categoryQuestions: [QuizQuestion] = []
     var currentIndex = 0
+    
+
 
     @IBOutlet weak var orangeButton: UIButton!
     @IBOutlet weak var yellowButton: UIButton!
@@ -28,7 +31,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        answerField.delegate = self
         
         setupQuiz()
     }
@@ -80,12 +83,14 @@ class ViewController: UIViewController {
     
     @IBAction func backButton(_ sender: Any) {
         showButtons()
+        answerField.text = ""
     }
     
     
     @IBAction func showAnswer(_ sender: Any) {
         currentIndex += 0
         answerLabel.text=categoryQuestions[currentIndex].answer
+        answerLabel.isHidden = false
         setupQuiz()
     }
     
@@ -93,8 +98,21 @@ class ViewController: UIViewController {
     @IBAction func nextQuestion(_ sender: Any) {
         currentIndex += 1
         questionLabel.text=categoryQuestions[currentIndex].question
+        answerLabel.isHidden = true
         setupQuiz()
+        answerField.text = ""
         
+    }
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        answerLabel.isHidden = false
+        if answerField.text == categoryQuestions[currentIndex].answer {
+            answerLabel.text = "Correct ✅"
+    } else {
+        answerLabel.text = "False ❌"
+    }
+        return true
     }
     
     
@@ -106,7 +124,6 @@ class ViewController: UIViewController {
         orangeButton.isHidden = true
         backButton.isHidden = false
         questionLabel.isHidden = false
-        answerLabel.isHidden = false
         answerField.isHidden = false
         showAnswer.isHidden = false
         nextQuestion.isHidden = false
@@ -125,7 +142,7 @@ class ViewController: UIViewController {
         nextQuestion.isHidden = true
     }
     
-    
+   
     
     func getLocalQuizData() {
         // Call readLocalFile function with the name of the local file (localQuizData)

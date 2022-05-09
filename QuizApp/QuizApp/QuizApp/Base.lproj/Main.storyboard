@@ -29,7 +29,7 @@
                                     <constraint firstAttribute="height" constant="41" id="mHv-5u-64P"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button">
+                                <buttonConfiguration key="configuration" style="filled" title="blue">
                                     <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -43,7 +43,7 @@
                                     <constraint firstAttribute="width" constant="109" id="GLB-cB-rBv"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button">
+                                <buttonConfiguration key="configuration" style="filled" title="red">
                                     <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -57,7 +57,7 @@
                                     <constraint firstAttribute="height" constant="38" id="JKA-vb-asb"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button">
+                                <buttonConfiguration key="configuration" style="filled" title="green">
                                     <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -71,7 +71,7 @@
                                     <constraint firstAttribute="width" constant="111" id="riB-JD-DXo"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button">
+                                <buttonConfiguration key="configuration" style="filled" title="yellow">
                                     <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -96,6 +96,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="answerField:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Tzw-l2-dwr"/>
+                                </connections>
                             </textField>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m7g-cX-kZW">
                                 <rect key="frame" x="10" y="389" width="111" height="38"/>
@@ -116,7 +119,7 @@
                                     <constraint firstAttribute="height" constant="38" id="yoY-sz-afR"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button">
+                                <buttonConfiguration key="configuration" style="filled" title="orange">
                                     <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -135,8 +138,8 @@
                                     <action selector="nextQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7cF-gG-4Db"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKN-lG-P0I">
-                                <rect key="frame" x="10" y="55" width="111" height="38"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKN-lG-P0I">
+                                <rect key="frame" x="10" y="54" width="111" height="38"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="111" id="9vK-dU-kF6"/>
                                     <constraint firstAttribute="height" constant="38" id="V26-Vw-l0O"/>
@@ -149,8 +152,8 @@
                                     <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iSK-Ld-evT"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jsj-mm-Oc6">
-                                <rect key="frame" x="135" y="170" width="155" height="36"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jsj-mm-Oc6">
+                                <rect key="frame" x="50" y="231" width="314" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -162,18 +165,17 @@
                             <constraint firstItem="6SR-fp-DVu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="5pb-AQ-1Bg"/>
                             <constraint firstItem="mU4-w7-SHC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="7HN-Ip-Xh6"/>
                             <constraint firstItem="D3t-i2-a8I" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="73" id="7lh-VS-aGS"/>
-                            <constraint firstItem="Jsj-mm-Oc6" firstAttribute="top" secondItem="D3t-i2-a8I" secondAttribute="bottom" constant="15" id="B99-Zr-UHb"/>
                             <constraint firstItem="eay-g9-Cak" firstAttribute="top" secondItem="kHm-KL-y2S" secondAttribute="bottom" constant="172" id="ELw-27-wjN"/>
                             <constraint firstItem="m7g-cX-kZW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Fe4-rw-fNf"/>
                             <constraint firstItem="RU5-ns-cHR" firstAttribute="top" secondItem="sMR-rW-6t4" secondAttribute="bottom" constant="23" id="G3h-F4-O8s"/>
                             <constraint firstItem="DG3-vm-GfJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="GR1-e2-NY7"/>
                             <constraint firstItem="sMR-rW-6t4" firstAttribute="top" secondItem="D3t-i2-a8I" secondAttribute="bottom" constant="133" id="Gdk-Lx-Wtl"/>
+                            <constraint firstItem="Jsj-mm-Oc6" firstAttribute="top" secondItem="D3t-i2-a8I" secondAttribute="bottom" constant="76" id="MJK-RH-86P"/>
+                            <constraint firstItem="Jsj-mm-Oc6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Pxg-KX-Xm8"/>
                             <constraint firstItem="D3t-i2-a8I" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Qzg-9X-bcI"/>
                             <constraint firstItem="DG3-vm-GfJ" firstAttribute="top" secondItem="mU4-w7-SHC" secondAttribute="bottom" constant="86" id="RMh-jd-s9Z"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eay-g9-Cak" secondAttribute="trailing" constant="10" id="SR2-Kb-mAa"/>
-                            <constraint firstAttribute="width" secondItem="Jsj-mm-Oc6" secondAttribute="width" multiplier="2.67097" id="Tv4-CO-czE"/>
                             <constraint firstItem="m7g-cX-kZW" firstAttribute="top" secondItem="DG3-vm-GfJ" secondAttribute="bottom" constant="172" id="UDG-HB-AMb"/>
-                            <constraint firstAttribute="height" secondItem="Jsj-mm-Oc6" secondAttribute="height" multiplier="24.8889" id="X7a-bS-trl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kHm-KL-y2S" secondAttribute="trailing" constant="10" id="cvF-hE-guq"/>
                             <constraint firstItem="RU5-ns-cHR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dVC-fx-d95"/>
                             <constraint firstItem="kHm-KL-y2S" firstAttribute="top" secondItem="6SR-fp-DVu" secondAttribute="bottom" constant="83" id="evC-rw-bpM"/>
